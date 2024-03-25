@@ -11,7 +11,7 @@ perform_base_setup() {
     echo "Performing base setup..."
     # Add your base setup commands here
     source base/base_install.sh
-    
+    base_install
 }
 
 while getopts ":bf" opt; do

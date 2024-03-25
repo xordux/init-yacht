@@ -6,8 +6,8 @@
 add_section() {
     local tag="$1"
     local command="$2"
-    local start_comment="# START-$tag"
-    local end_comment="# END-$tag"
+    local start_comment="# Yatch: $tag START"
+    local end_comment="# Yatch: $tag END"
 
     # Check if the section already exists
     if grep -q "$start_comment" ~/.bashrc; then
@@ -26,8 +26,8 @@ add_section() {
 # Function to remove a section from .bashrc file
 remove_section() {
     local tag="$1"
-    local start_comment="# START-$tag"
-    local end_comment="# END-$tag"
+    local start_comment="# Yatch: $tag START"
+    local end_comment="# Yatch: $tag END"
 
     # Check if the section exists
     if ! grep -q "$start_comment" ~/.bashrc; then
@@ -45,8 +45,8 @@ remove_section() {
 append_to_section() {
     local tag="$1"
     local command="$2"
-    local start_comment="# START-$tag"
-    local end_comment="# END-$tag"
+    local start_comment="# Yatch: $tag START"
+    local end_comment="# Yatch: $tag END"
 
     # Check if the section exists
     if ! grep -q "$start_comment" ~/.bashrc; then
