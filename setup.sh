@@ -10,6 +10,8 @@ perform_full_setup() {
 perform_base_setup() {
     echo "Performing base setup..."
     # Add your base setup commands here
+    source base/base_install.sh
+    
 }
 
 while getopts ":bf" opt; do
@@ -26,6 +28,7 @@ while getopts ":bf" opt; do
             ;;
         \?)
             echo "Invalid option: -$OPTARG"
+            exit -1
             ;;
     esac
 done
@@ -35,4 +38,5 @@ if [ $OPTIND -eq 1 ]; then
     echo "Options:"
     echo "  -b: Perform base setup"
     echo "  -f: Perform full setup"
+    exit -1
 fi
