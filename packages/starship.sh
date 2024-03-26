@@ -3,6 +3,6 @@
 source lib/bashrc_lib.sh
 
 starship(){
-    curl -sS https://starship.rs/install.sh | sh
+    yes "" | curl -sS https://starship.rs/install.sh | sh -s -- --yes
     add_section "STARSHIP" 'eval "$(starship init bash)"'
 }
