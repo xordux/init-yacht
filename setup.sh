@@ -20,7 +20,7 @@ test(){
     test_yatch
 }
 
-while getopts ":bf" opt; do
+while getopts ":bft" opt; do
     case $opt in
         b)
             echo "Base option selected"
