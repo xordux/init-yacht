@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source lib/bashrc_lib.sh
+source packages/alias.sh
+source packages/starship.sh
 
 base_install(){
-    add_section "BASE-INSTALL" "echo 'Base install ADD section'"
-    append_to_section "BASE-INSTALL" "echo 'Base install APPEND command'"
-    remove_section "BASE-INSTALL"
+    alias
+    starship
 }
