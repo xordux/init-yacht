@@ -14,6 +14,12 @@ perform_base_setup() {
     base_install
 }
 
+test(){
+    echo "Performing test..."
+    source lib/test.sh
+    test_yatch
+}
+
 while getopts ":bf" opt; do
     case $opt in
         b)
@@ -25,6 +31,10 @@ while getopts ":bf" opt; do
             echo "Full option selected"
             # Add your code for the full option here
             perform_full_setup
+            ;;
+        t)
+            echo "Test option selected"
+            test
             ;;
         \?)
             echo "Invalid option: -$OPTARG"
