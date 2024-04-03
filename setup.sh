@@ -50,3 +50,8 @@ if [ $OPTIND -eq 1 ]; then
     echo "  -f: Perform full setup"
     exit -1
 fi
+
+echo ""
+echo "Setup completed successfully"
+echo "Please restart your terminal to apply changes or run the following command:"
+echo 'exec "$SHELL"'
