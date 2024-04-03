@@ -11,4 +11,5 @@ base_install(){
     fzf
     vscode_cli
     sudo dnf install azure-cli  -y
+    sudo dnf install rpm-build -y
 }
